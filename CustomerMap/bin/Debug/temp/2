@@ -1,0 +1,6 @@
+
+ ];  
+  
+                function map_init() {  
+                    var map = new BMap.Map("map"); 
+                    var point = new BMap.Point(

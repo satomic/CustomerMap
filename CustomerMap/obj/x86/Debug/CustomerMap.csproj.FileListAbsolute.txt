@@ -6,3 +6,4 @@ E:\项目\csharp\CustomerMap\CustomerMap\obj\x86\Debug\CustomerMap.exe
 E:\项目\csharp\CustomerMap\CustomerMap\obj\x86\Debug\CustomerMap.pdb
 E:\项目\csharp\CustomerMap\CustomerMap\obj\x86\Debug\CustomerMap.Form_Main.resources
 E:\项目\csharp\CustomerMap\CustomerMap\obj\x86\Debug\CustomerMap.Form_DataProcess.resources
+E:\项目\csharp\CustomerMap\CustomerMap\obj\x86\Debug\CustomerMap.csprojResolveAssemblyReference.cache

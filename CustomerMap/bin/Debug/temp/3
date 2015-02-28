@@ -1,0 +1,54 @@
+); 
+                    map.centerAndZoom(point, 13); 
+                    map.enableScrollWheelZoom(true); 
+                    var ctrlNav = new window.BMap.NavigationControl({  
+                        anchor: BMAP_ANCHOR_TOP_LEFT,  
+                        type: BMAP_NAVIGATION_CONTROL_LARGE  
+                    });  
+                    map.addControl(ctrlNav);   
+                    var ctrlOve = new window.BMap.OverviewMapControl({  
+                        anchor: BMAP_ANCHOR_BOTTOM_RIGHT,  
+                        isOpen: 1  
+                    });  
+                    map.addControl(ctrlOve);  
+                    var ctrlSca = new window.BMap.ScaleControl({  
+                        anchor: BMAP_ANCHOR_BOTTOM_LEFT  
+                    });  
+                    map.addControl(ctrlSca);  
+  
+                    var point = new Array();  
+                    var marker = new Array();   
+                    var info = new Array(); 
+var i = 0	;				
+                    for (i = 0; i < markerArr.length; i++) {  
+                        var p0 = markerArr[i].point.split(",")[0];
+                        var p1 = markerArr[i].point.split(",")[1]; 
+                        point[i] = new window.BMap.Point(p0, p1);   
+                        marker[i] = new window.BMap.Marker(point[i]);
+                        map.addOverlay(marker[i]);  
+                        marker[i].setAnimation(BMAP_ANIMATION_BOUNCE); 
+                        var label = new window.BMap.Label(markerArr[i].title, { offset: new window.BMap.Size(20, -10) });  
+                        marker[i].setLabel(label);  
+                        info[i] = new window.BMap.InfoWindow("<p style=’font-size:12px;lineheight:1.8em;’>" + markerArr[i].title + "</br>地址：" + markerArr[i].address + "</br> 电话：" + markerArr[i].tel + "</br></p>"); // 创建信息窗口对象  
+						
+						
+					} 
+					for (i = 0; i < 5; i++) {
+					marker[i].addEventListener("mouseover", function () {  
+                        this.openInfoWindow(info[i]);  
+                    }); 
+					}
+
+                }  
+              
+                function map_load() {  
+                    var load = document.createElement("script");  
+                    load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";  
+                    document.body.appendChild(load);  
+                }  
+                window.onload = map_load;  
+            </script>  
+        </fieldset>  
+    </div>  
+</body>  
+</html> 
