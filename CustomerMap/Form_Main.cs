@@ -18,7 +18,7 @@ namespace CustomerMap
         public string mapPath,
                       key,
                       vers,
-                      version="2.0";
+                      version="2.1";
 
         public Form_Main()
         {

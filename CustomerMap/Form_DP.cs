@@ -283,7 +283,8 @@ namespace CustomerMap
                 }
                 
                 string title1 = "";
-                string title2 = data[i, 0] + ",顾问：" + data[i, 3] + ",买方：" + data[i, 4] + ",地址：" + data[i, 8];
+                //string title2 = data[i, 0] + ",顾问：" + data[i, 3] + ",买方：" + data[i, 4] + ",地址：" + data[i, 8];
+                string title2 = data[i, 0] + "：" + data[i, 7];
                 if (getBaiduInfo(false,data[i, 8], data[i, 5], ref lng, ref lat, ref name) == false)
                 {
                     //错误处理操作
